@@ -44,7 +44,7 @@ const Hero = () => {
         <img
           src="./ProfilePic.jpg"
           alt="Profil Fotoğrafı"
-          className="rounded-full w-72 h-72 object-cover shadow-lg border-4 border-indigo-500"
+          className="rounded-half w-80 h-80 object-cover shadow-lg border-4 border-indigo-500"
         />
       </div>
     </section>
