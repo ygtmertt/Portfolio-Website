@@ -10,6 +10,8 @@ function App() {
   const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
+    // This effect ensures the 'dark' class is present or absent on the root HTML element,
+    // which enables Tailwind CSS's dark mode functionality across the app.
     if (darkMode) {
       document.documentElement.classList.add('dark');
     } else {
@@ -18,7 +20,9 @@ function App() {
   }, [darkMode]);
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100 transition-colors duration-300">
+    // The main app container's background and default text color dynamically change
+    // based on the 'darkMode' state, using the colors defined in tailwind.config.js.
+    <div className="min-h-screen bg-lightBackground dark:bg-darkBackground text-gray-900 dark:text-gray-100 transition-colors duration-300">
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
       <main className="max-w-6xl mx-auto px-6">
         <Hero />
