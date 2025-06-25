@@ -47,7 +47,7 @@ const Hero = () => {
       </div>
 
       {/* Profile Photo */}
-      <div className="flex-1 mb-10 md:mb-0 flex justify-center">
+      <div className="flex-1 mb-10 md:mb-0 flex justify-end">
         <img
           src="./ProfilePic.jpg"
           alt="Profil Fotoğrafı"

@@ -4,33 +4,19 @@ const Profile = () => {
   return (
     <section
       id="profile"
-      className="bg-darkBackground text-lightSecondary py-20 px-6 max-w-6xl mx-auto"
+      className="py-20 px-6 max-w-6xl mx-auto"
     >
-      <h2 className="text-4xl font-bold text-darkPrimary mb-12">Profile</h2>
+      <h2 className="text-4xl font-bold text-lightPrimary dark:text-darkPrimary mb-12 text-center">Profile</h2>
 
-      <div className="grid md:grid-cols-3 gap-10 items-start">
+      <div className="bg-darkPrimary dark:bg-lightPrimary grid md:grid-cols-3 gap-10 items-start">
         {/* Left Column: Basic Information */}
         <div className="md:col-span-1 space-y-4">
-          <h3 className="text-xl font-semibold text-white">Basic Information</h3>
-          <div>
-            <p className="font-semibold text-lightPrimary">Doğum tarihi</p>
-            <p className="text-lightSecondary">24.03.1996</p>
-          </div>
-          <div>
-            <p className="font-semibold text-lightPrimary">İkamet Şehri</p>
-            <p className="text-lightSecondary">Ankara</p>
-          </div>
-          <div>
-            <p className="font-semibold text-lightPrimary">Eğitim Durumu</p>
-            <p className="text-lightSecondary">
-              Hacettepe Üniv. Biyoloji<br />
-              Lisans, 2016
-            </p>
-          </div>
-          <div>
-            <p className="font-semibold text-lightPrimary">Tercih Ettiği Rol</p>
-            <p className="text-lightSecondary">Frontend, UI</p>
-          </div>
+          <h3 className="text-2xl font-semibold text-lightPrimary dark:text-darkPrimary text-center">Basic Information</h3>
+          <ul>
+            <li className=''>Education</li>
+            <li>Languages</li>
+            <li>Hobbies</li>
+          </ul>
         </div>
 
         {/* Center: Image */}
@@ -41,22 +27,33 @@ const Profile = () => {
             className="rounded-lg object-cover w-full h-auto"
             onError={(e) => {
               e.target.onerror = null;
-              e.target.src = 'https://via.placeholder.com/300x300';
+              e.target.src = '/icons/removedBackground.png';
             }}
           />
         </div>
 
         {/* Right Column: About Me */}
         <div className="md:col-span-1">
-          <h3 className="text-xl font-semibold text-white mb-4">About Me</h3>
-          <p className="text-lightSecondary mb-4">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit
-            laborum aliquam voluptatum nisi mollitia.
-          </p>
-          <p className="text-lightSecondary">
-            Minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt
-            quam temporibus cumque magnam!
-          </p>
+          <h3 className="text-2xl font-semibold mb-4 text-center text-lightPrimary dark:text-darkPrimary">Professional Experience</h3>
+          <ul className="text-black dark:text-white text-xl mb-4 list-disc">
+            <li>
+              <p className='underline underline-offset-4 strong'>Softtech</p>
+              <p className="italic text-lg">Long Term Backend Developer Intern</p>
+              <p className="italic text-base">(Apr 2024 - Jul 2024)</p>
+            </li>
+            <br></br>
+            <li>
+              <p className='underline underline-offset-4'>KPMG</p>
+              <p className="italic text-lg">Long Term Cyber Security Intern</p>
+              <p className="italic text-base">(Aug 2023 - Jan 2024)</p>
+            </li>
+            <br></br>
+            <li>
+              <p className='underline underline-offset-4'>Kitoko Lighting</p>
+              <p className="italic text-lg">IT Intern</p>
+              <p className="italic text-base">(Jul 2021 - Aug 2021)</p>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

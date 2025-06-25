@@ -19,8 +19,9 @@ const Header = ({ darkMode, setDarkMode }) => {
         <nav className="hidden md:flex space-x-8 font-medium text-lightSecondary dark:text-darkSecondary">
           <a href="#hero" className="font-bold over:text-lightPrimary dark:hover:text-darkPrimary transition">Home</a>
           <a href="#about" className="font-bold hover:text-lightPrimary dark:hover:text-darkPrimary transition">About</a>
+          <a href="#contact" className="font-bold hover:text-lightPrimary dark:hover:text-darkPrimary transition">Profile</a>
           <a href="#projects" className="font-bold hover:text-lightPrimary dark:hover:text-darkPrimary transition">Projects</a>
-          <a href="#contact" className="font-bold hover:text-lightPrimary dark:hover:text-darkPrimary transition">Contact</a>
+          <a href="#footer" className="font-bold hover:text-lightPrimary dark:hover:text-darkPrimary transition">Contact</a>
         </nav>
 
         {/* Dark Mode Toggle (Desktop) - button background adapts to the new primary colors */}
