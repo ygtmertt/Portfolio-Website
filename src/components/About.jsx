@@ -19,7 +19,7 @@ const About = () => {
       <h2 className="text-4xl font-bold mb-8 text-lightPrimary dark:text-darkPrimary text-center">
         About Me
       </h2>
-      <p className="max-w-3xl mx-auto text-center text-lightSecondary dark:text-darkSecondary mb-12 leading-relaxed">
+      <p className="max-w-4xl text-2xl mx-auto text-center text-lightSecondary dark:text-darkSecondary mb-12 leading-relaxed">
         Hi, I’m Yiğit Ömer Mert. While my main focus is backend development with Java, Spring Boot, and databases, I also enjoy working on the frontend using React and Redux. Creating smooth, responsive, and user-friendly interfaces is something I’m passionate about. Combining solid backend architecture with polished frontend experiences allows me to build complete and efficient applications. I’m always eager to learn new technologies and improve my skills to deliver high-quality software.
       </p>
       <br/>

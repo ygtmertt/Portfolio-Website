@@ -12,15 +12,15 @@ const Header = ({ darkMode, setDarkMode }) => {
       <div className="max-w-6xl mx-auto flex justify-between items-center p-4 md:px-8">
         {/* Logo text color adapts */}
         <div className="text-2xl font-bold cursor-pointer select-none darkPrimary dark:ligthPrimary">
-          Yiğit Ömer Mert
+          MyPortfolio
         </div>
 
         {/* Desktop Menu - link colors adapt to the new palette */}
         <nav className="hidden md:flex space-x-8 font-medium text-lightSecondary dark:text-darkSecondary">
-          <a href="#hero" className="hover:text-lightPrimary dark:hover:text-darkPrimary transition">Home</a>
-          <a href="#about" className="hover:text-lightPrimary dark:hover:text-darkPrimary transition">About</a>
-          <a href="#projects" className="hover:text-lightPrimary dark:hover:text-darkPrimary transition">Projects</a>
-          <a href="#contact" className="hover:text-lightPrimary dark:hover:text-darkPrimary transition">Contact</a>
+          <a href="#hero" className="font-bold over:text-lightPrimary dark:hover:text-darkPrimary transition">Home</a>
+          <a href="#about" className="font-bold hover:text-lightPrimary dark:hover:text-darkPrimary transition">About</a>
+          <a href="#projects" className="font-bold hover:text-lightPrimary dark:hover:text-darkPrimary transition">Projects</a>
+          <a href="#contact" className="font-bold hover:text-lightPrimary dark:hover:text-darkPrimary transition">Contact</a>
         </nav>
 
         {/* Dark Mode Toggle (Desktop) - button background adapts to the new primary colors */}
