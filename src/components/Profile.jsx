@@ -11,11 +11,11 @@ const Profile = () => {
       <div className="bg-darkPrimary dark:bg-lightPrimary grid md:grid-cols-3 gap-10 items-start">
         {/* Left Column: Basic Information */}
         <div className="md:col-span-1 space-y-4">
-          <h3 className="text-2xl font-semibold text-lightPrimary dark:text-darkPrimary text-center">Basic Information</h3>
-          <ul>
-            <li className=''>Education</li>
-            <li>Languages</li>
-            <li>Hobbies</li>
+          <h3 className="text-2xl font-semibold text-lightPrimary dark:text-darkPrimary text-center underline underline-offset-4 strong">Basic Information</h3>
+          <ul className="text-black dark:text-white text-xl mb-4 list-disc">
+            <li className='underline underline-offset-4 strong'>Education</li>
+            <li className='underline underline-offset-4 strong'>Languages</li>
+            <li className='underline underline-offset-4 strong'>Hobbies</li>
           </ul>
         </div>
 
@@ -34,7 +34,7 @@ const Profile = () => {
 
         {/* Right Column: About Me */}
         <div className="md:col-span-1">
-          <h3 className="text-2xl font-semibold mb-4 text-center text-lightPrimary dark:text-darkPrimary">Professional Experience</h3>
+          <h3 className="text-2xl font-semibold mb-4 text-center text-lightPrimary dark:text-darkPrimary underline underline-offset-4 strong">Professional Experience</h3>
           <ul className="text-black dark:text-white text-xl mb-4 list-disc">
             <li>
               <p className='underline underline-offset-4 strong'>Softtech</p>

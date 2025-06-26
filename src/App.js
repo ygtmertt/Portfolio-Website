@@ -30,7 +30,7 @@ function App() {
         <Profile />
         <Projects />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
