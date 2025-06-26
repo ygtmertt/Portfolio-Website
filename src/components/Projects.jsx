@@ -1,121 +1,89 @@
+import React from 'react';
+import { useProjects } from '../context/ProjectsContext';
 import { FaGithub, FaGlobe } from 'react-icons/fa';
 
-const projects = [
-  {
-    title: 'TaskTrackerr',
-    description:
-      'A simple, customizable, minimal setup cookie plugin that allows users to select which cookies to accept or decline. This project showcases frontend development skills with React and Redux.',
-    image: '/icons/TaskTracker.jpg', // Assuming these paths are correct relative to your public folder
-    tags: ['react', 'javascript', 'vercel', 'frontend'],
-    github: 'https://github.com/ygtmertt/Task-Tracker',
-    demo: 'https://workintech-demo.vercel.app',
-  },
-  {
-    title: 'Pizza Website',
-    description:
-      'An online pizza store app i managed to put together with my newfound frontend skills. I used HTML, JavaScript and CSS in order to create this static website.',
-    image: '/icons/pizzaWebsite.svg', // Assuming these paths are correct relative to your public folder
-    tags: ['html', 'javascript', 'css', 'frontend'],
-    github: 'https://github.com/ygtmertt/Pizza-Website',
-    demo: 'https://journey-demo.vercel.app',
-  },
-  {
-    title: 'Calculator App',
-    description:
-      'I programmed a calculator GUI in Java using Swing library. Application includes a functional calculator with buttons and text fields.',
-    image: '/icons/calculatotrPic.jpg', // Assuming these paths are correct relative to your public folder
-    tags: ['java', 'OOP', 'swing', 'backend'],
-    github: 'https://github.com/ygtmertt/Calculator-App',
-    demo: 'https://journey-demo.vercel.app',
-  },
-  // You can add more projects here following the same structure
-];
-
 const Projects = () => {
+  const { projects } = useProjects();
+
   return (
     <section
       id="projects"
-      // Section background and text color now adapt to the new palette.
-      // Using gray-100 for light mode background to slightly distinguish from main app background,
-      // and gray-800 for dark mode, with rounded corners.
-      className="dark:lightPrimary text-gray-900 dark:text-gray-100 py-20 px-6 max-w-6xl mx-auto rounded-lg"
+      // Section background and default text color adapt to the new palette.
+      // Using gray-100 for light mode background to subtly distinguish from main app background,
+      // and gray-800 for dark mode.
+      className="py-20 px-6 bg-darkPrimary dark:bg-lightPrimary text-gray-900 dark:text-gray-100"
     >
-      <h2 className="text-4xl font-bold mb-12 text-lightPrimary dark:text-darkPrimary text-center">
-        Projects
-      </h2>
+      <div className="max-w-6xl mx-auto">
+        {/* Heading uses primary theme colors */}
+        <h2 className="text-4xl font-bold text-lightPrimary dark:text-darkPrimary text-center mb-12">
+          Projects
+        </h2>
 
-      <div className="flex flex-col gap-10">
-        {projects.map(({ title, description, image, tags, github, demo }) => (
-          <div
-            key={title}
-            // Project card background, shadow, and layout adapt.
-            // Hover effect also uses primary colors.
-            className="text-2xl bg-lightPrimary dark:bg-darkPrimary lightPrimary dark:darkPrimary rounded-xl shadow-lg flex flex-col md:flex-row overflow-hidden
-                       hover:shadow-lightPrimary dark:hover:shadow-darkPrimary transition duration-300"
-          >
-            {/* Left: Image Section */}
-            <div className="md:w-1/2 flex-shrink-0"> {/* flex-shrink-0 to prevent image from shrinking */}
+        <div className="flex flex-col gap-14">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              // Project card container with alternating layout for image and content.
+              // Background, shadow, and hover effect adapt to the new palette.
+              className={`bg-lightPrimary dark:bg-darkPrimary rounded-xl shadow-lg flex flex-col md:flex-row overflow-hidden
+                         hover:shadow-lightPrimary/50 dark:hover:shadow-darkPrimary/50 transition duration-300`}
+            >
+              {/* Image Section */}
               <img
-                src={image}
-                alt={title}
-                className="w-full h-full object-cover min-h-[200px] md:min-h-[300px]" // Ensure image has a minimum height
-                loading="lazy"
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src = 'https://placehold.co/400x300/cccccc/333333?text=Project+Preview'; // Updated placeholder
-                }}
+                src={project.image}
+                alt={project.title}
+                // Ensure image fills its container, has rounded corners, and a minimum height.
+                className="w-full md:w-1/2 h-auto rounded-xl md:rounded-none object-cover shadow-lg"
+                style={{minHeight: '250px'}} // Inline style for minimum height to ensure image visibility
               />
-            </div>
+              {/* Content Section */}
+              <div className="md:w-1/2 p-6 flex flex-col justify-between"> {/* Added flex-col and justify-between for consistent spacing */}
+                <div>
+                  {/* Project title uses primary theme colors */}
+                  <h3 className="text-2xl font-bold text-darkPrimary dark:text-lightPrimary mb-2">
+                    {project.title}
+                  </h3>
+                  {/* Description uses secondary theme colors */}
+                  <p className="text-darkSecondary dark:text-lightSecondary text-2xl mb-4">
+                    {project.description}
+                  </p>
 
-            {/* Right: Content Section */}
-            <div className="md:w-1/2 p-6 flex flex-col justify-between">
-              <div>
-                {/* Title color adapts to primary theme colors */}
-                <h3 className="text-3xl font-bold text-darkPrimary dark:text-lightPrimary mb-4">
-                  {title}
-                </h3>
-                {/* Description text color adapts to secondary theme colors */}
-                <p className="text-darkSecondary dark:text-lightSecondary mb-8">{description}</p>
+                  {/* Tags section: background and text colors adapt to the new palette */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map((tag, i) => (
+                      <span
+                        key={i}
+                        className="bg-darkPrimary dark:bg-lightPrimary text-lightSecondary dark:text-darkSecondary text-base font-semibold px-3 py-1 rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
 
-                {/* Tags section: dynamic background and text colors */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="bg-darkPrimary dark:bg-lightPrimary text-gray-900 dark:text-white text-base font-semibold px-4 py-2 rounded-full "
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                {/* Links use primary theme colors with accent hover */}
+                <div className="flex gap-8 mt-auto"> {/* Added mt-auto to push links to the bottom */}
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-4xl text-darkPrimary dark:text-lightPrimary hover:text-accent transition"
+                  >
+                    <FaGithub />
+                  </a>
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-4xl text-darkPrimary dark:text-lightPrimary hover:text-accent transition"
+                  >
+                    <FaGlobe />
+                  </a>
                 </div>
               </div>
-
-              {/* Action buttons/links adapt to primary colors with accent hover */}
-              <div className="flex gap-6">
-                <a
-            href="https://www.linkedin.com/in/yiğit-ömer-mert-6ab55b243"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            // Social icons adapt their color using the new palette
-            className="text-darkSecondary dark:text-lightSecondary hover:text-darkPrimary dark:hover:text-lightPrimary transition text-3xl"
-          >
-            <FaGlobe />
-          </a>
-                <a
-                  href="https://github.com/ygtmertt"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub"
-                  // Social icons adapt their color using the new palette
-                  className="text-darkSecondary dark:text-lightSecondary hover:text-darkPrimary dark:hover:text-lightPrimary transition text-3xl"
-                >
-                  <FaGithub />
-                </a>
-              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

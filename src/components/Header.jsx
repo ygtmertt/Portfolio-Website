@@ -6,6 +6,8 @@ const Header = ({ darkMode, setDarkMode }) => {
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const toggleDarkMode = () => setDarkMode(!darkMode);
 
+  
+
   return (
     // Header background and text color now fully adapt to dark/light mode using the new palette
     <header className="bg-lightBackground dark:bg-darkBackground text-gray-900 dark:text-gray-100 shadow-md sticky top-0 z-50">

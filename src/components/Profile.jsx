@@ -11,7 +11,7 @@ const Profile = () => {
       <div className="bg-darkPrimary dark:bg-lightPrimary grid md:grid-cols-3 gap-20 items-start">
         {/* Left Column: Basic Information */}
         <div className="md:col-span-1 space-y-4">
-          <h3 className="text-2xl font-semibold text-lightPrimary dark:text-darkPrimary text-start underline underline-offset-4 strong">Basic Information</h3>
+          <h3 className="text-2xl font-semibold text-lightPrimary dark:text-darkPrimary text-start strong">Basic Information</h3>
           <ul className="text-black dark:text-white text-xl mb-4">
             <li className='underline underline-offset-4 strong'>Location</li>
             <p className='text-black dark:text-white italic text-lg'>Istanbul, Turkey</p>
@@ -26,7 +26,7 @@ const Profile = () => {
 
         {/* Center: Image */}
         <div className='bg-darkPrimary dark:bg-lightPrimary'>
-          <h3 className="text-2xl font-semibold text-lightPrimary dark:text-darkPrimary text-center underline underline-offset-4 strong mb-4">Education</h3>
+          <h3 className="text-2xl font-semibold text-lightPrimary dark:text-darkPrimary text-center strong mb-4">Education</h3>
           <div className='text-black dark:text-white mb-4'>
             <p className='underline underline-offset-4 strong text-xl text-start'>Workintech</p>
             <p className=' italic text-lg'>Fullstack Course<span className='text-base'>   (2025-2025)</span></p>
@@ -47,7 +47,7 @@ const Profile = () => {
 
         {/* Right Column: About Me */}
         <div className="md:col-span-1">
-          <h3 className="text-2xl font-semibold mb-4 text-center text-lightPrimary dark:text-darkPrimary underline underline-offset-4 strong">Professional Experience</h3>
+          <h3 className="text-2xl font-semibold mb-4 text-center text-lightPrimary dark:text-darkPrimary strong">Professional Experience</h3>
           <ul className="text-black dark:text-white text-xl mb-4">
             <li>
               <p className='underline underline-offset-4 strong'>Softtech</p>

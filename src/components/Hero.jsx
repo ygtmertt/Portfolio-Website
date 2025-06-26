@@ -14,7 +14,7 @@ const Hero = () => {
           Hi,
         </h1>
         <h1 className="text-5xl font-extrabold mb-4 leading-tight text-gray-900 dark:text-gray-100">
-          I'm <span className="text-lightPrimary dark:text-darkPrimary">Yiğit Ömer Mert</span>
+          I'm<span className="text-lightPrimary dark:text-darkPrimary">Yiğit Ömer Mert</span>
         </h1>
         {/* Paragraph text also adapts its color using the new palette */}
         <p className="text-lg text-lightSecondary dark:text-darkSecondary max-w-md mx-auto md:mx-0 mb-8">
