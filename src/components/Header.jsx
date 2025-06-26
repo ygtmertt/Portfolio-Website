@@ -11,7 +11,7 @@ const Header = ({ darkMode, setDarkMode }) => {
     <header className="bg-lightBackground dark:bg-darkBackground text-gray-900 dark:text-gray-100 shadow-md sticky top-0 z-50">
       <div className="max-w-6xl mx-auto flex justify-between items-center p-4 md:px-8">
         {/* Logo text color adapts */}
-        <div className="text-2xl font-bold cursor-pointer select-none darkPrimary dark:ligthPrimary">
+        <div className="text-4xl font-bold cursor-pointer select-none darkPrimary dark:ligthPrimary">
           MyPortfolio
         </div>
 

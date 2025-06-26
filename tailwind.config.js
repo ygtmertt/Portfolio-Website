@@ -13,10 +13,6 @@ module.exports = {
         lightSecondary: '#1A202C',      // Darker grey for secondary text/elements in light mode
         accent: '#ED8936',              // Orange for hover/focus states
         error: '#E53E3E',               // Red for error messages
-
-        // These colors are kept for historical context but are not actively used for the button background anymore
-        toggleDarkSelected: '#4731D3',
-        toggleLightSelected: '#CBF281',
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],

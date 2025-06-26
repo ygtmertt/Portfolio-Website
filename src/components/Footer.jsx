@@ -2,7 +2,7 @@ import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-lightBackground dark:bg-darkBackground text-lightSecondary py-16 px-4 text-center">
+    <footer id="footer" className="bg-lightBackground dark:bg-darkBackground text-lightSecondary py-16 px-4 text-center">
       <h2 className="text-3xl font-bold text-lightPrimary dark:text-darkPrimary mb-4">Send me a message!</h2>
       <p className="text-dark dark:text-white mb-2">
         Got a question or proposal, or just want to say hello? Go ahead.
