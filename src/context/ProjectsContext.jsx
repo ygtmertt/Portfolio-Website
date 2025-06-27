@@ -17,7 +17,7 @@ const projects = [
     image: '/icons/pizzaWebsite.svg',
     tags: ['html', 'javascript', 'css', 'frontend'],
     github: 'https://github.com/ygtmertt/Pizza-Website',
-    demo: 'https://vercel.com/ygtmertts-projects/pizza-website/3Jpgb7HBzpj9UHEJrmeUcixrSMYt',
+    demo: 'https://pizza-website-lio88kow1-ygtmertts-projects.vercel.app/',
   },
   {
     title: 'Calculator App',
