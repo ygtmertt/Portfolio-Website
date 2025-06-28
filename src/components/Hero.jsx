@@ -1,25 +1,31 @@
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import React from "react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { useLanguage } from "../context/LanguageContext";
 
 const Hero = () => {
+  const { data, loading } = useLanguage();
+  if (loading) return null;
+
+  // Verileri API'den alıyoruz
+  const { greeting, intro, ctaHtml } = data.heroSection;
+
   return (
     <section
       id="hero"
-      // This section relies on the App.jsx's global background.
       className="flex flex-col-reverse md:flex-row items-center justify-between max-w-6xl mx-auto py-20 px-6"
     >
       {/* Text Section */}
       <div className="flex-1 text-center md:text-left">
-        {/* H1 tags now adapt their color based on dark/light mode using the new palette */}
         <h1 className="text-5xl font-extrabold mb-4 leading-tight text-gray-900 dark:text-gray-100">
-          Hi, 
+          {greeting}
         </h1>
         <h1 className="text-5xl font-extrabold mb-4 leading-tight text-gray-900 dark:text-gray-100">
-          I'm <span className="text-lightPrimary dark:text-darkPrimary">Yiğit Ömer Mert</span>
+          I'm <span className="text-lightPrimary dark:text-darkPrimary">{intro}</span>
         </h1>
-        {/* Paragraph text also adapts its color using the new palette */}
-        <p className="text-lg text-lightSecondary dark:text-darkSecondary max-w-md mx-auto md:mx-0 mb-8">
-          I'm a software developer who is passionate about building beautiful and functional web experiences.
-        </p>
+        <div
+          className="text-lg text-lightSecondary dark:text-darkSecondary max-w-md mx-auto md:mx-0 mb-8"
+          dangerouslySetInnerHTML={{ __html: ctaHtml }}
+        />
 
         {/* Social Buttons */}
         <div className="flex justify-center md:justify-start gap-8">
@@ -28,7 +34,6 @@ const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            // Social icons adapt their color using the new palette
             className="text-lightSecondary dark:text-darkSecondary hover:text-lightPrimary dark:hover:text-darkPrimary transition text-3xl"
           >
             <FaGithub />
@@ -38,7 +43,6 @@ const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            // Social icons adapt their color using the new palette
             className="text-lightSecondary dark:text-darkSecondary hover:text-lightPrimary dark:hover:text-darkPrimary transition text-3xl"
           >
             <FaLinkedin />

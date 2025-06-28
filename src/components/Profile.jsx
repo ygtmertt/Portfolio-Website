@@ -1,63 +1,55 @@
-import React from 'react';
-import { useProfile } from '../context/ProfileContext';
+import React from "react";
+import { useLanguage } from "../context/LanguageContext";
 
 const Profile = () => {
-  const { profile } = useProfile();
-  const { basicInfo, education, experience } = profile;
+  const { data, loading } = useLanguage();
+  if (loading) return null;
+
+  const { basicInformation, education, experience } = data.profileSection;
 
   return (
     <section id="profile" className="py-20 px-6 max-w-6xl mx-auto">
       <h2 className="text-4xl font-bold text-lightPrimary dark:text-darkPrimary mb-12 text-center">Profile</h2>
 
-      <div className="grid md:grid-cols-3 gap-10 bg-darkPrimary dark:bg-lightPrimary p-10 rounded-xl">
-        {/* Basic Information */}
-        <div>
-          <h3 className="text-2xl font-semibold text-lightPrimary dark:text-darkPrimary mb-6">Basic Information</h3>
-          <div className="space-y-4 text-black dark:text-white text-lg">
-            <div>
-              <p className="underline underline-offset-4 font-semibold">Location</p>
-              <p className="italic">{basicInfo.location}</p>
-            </div>
-            <div>
-              <p className="underline underline-offset-4 font-semibold">Languages</p>
-              <p className="italic">{basicInfo.languages}</p>
-            </div>
-            <div>
-              <p className="underline underline-offset-4 font-semibold">Hobbies</p>
-              <p className="italic">{basicInfo.hobbies}</p>
-            </div>
-            <div>
-              <p className="underline underline-offset-4 font-semibold">Soft Skills</p>
-              <p className="italic">{basicInfo.softSkills}</p>
-            </div>
-          </div>
+      <div className="bg-darkPrimary dark:bg-lightPrimary grid md:grid-cols-3 gap-20 items-start">
+        {/* Left Column: Basic Information */}
+        <div className="md:col-span-1 space-y-4">
+          <h3 className="text-2xl font-semibold text-lightPrimary dark:text-darkPrimary text-start">Basic Information</h3>
+          <ul className="text-black dark:text-white text-xl mb-4">
+            <li className="underline underline-offset-4">Location</li>
+            <p className="italic text-lg">{basicInformation.location}</p>
+            <li className="underline underline-offset-4">Languages</li>
+            <p className="italic text-lg">{basicInformation.languages}</p>
+            <li className="underline underline-offset-4">Hobbies</li>
+            <p className="italic text-lg">{basicInformation.hobbies}</p>
+            <li className="underline underline-offset-4">Soft Skills</li>
+            <p className="italic text-lg">{basicInformation.softSkills}</p>
+          </ul>
         </div>
 
-        {/* Education */}
+        {/* Center: Education */}
         <div>
-          <h3 className="text-2xl font-semibold text-lightPrimary dark:text-darkPrimary mb-6 text-center">Education</h3>
-          <div className="space-y-6 text-black dark:text-white">
-            {education.map((edu, idx) => (
-              <div key={idx}>
-                <p className="underline underline-offset-4 font-semibold text-xl">{edu.school}</p>
-                <p className="italic">{edu.program} <span className="text-base">({edu.date})</span></p>
-              </div>
-            ))}
-          </div>
+          <h3 className="text-2xl font-semibold text-lightPrimary dark:text-darkPrimary text-center mb-4">Education</h3>
+          {education.map((edu, i) => (
+            <div key={i} className="text-black dark:text-white mb-4">
+              <p className="underline underline-offset-4 text-xl text-start">{edu.institution}</p>
+              <p className="italic text-lg">{edu.program}<span className="text-base"> {edu.period}</span></p>
+            </div>
+          ))}
         </div>
 
-        {/* Experience */}
-        <div>
-          <h3 className="text-2xl font-semibold text-lightPrimary dark:text-darkPrimary mb-6 text-center">Professional Experience</h3>
-          <div className="space-y-6 text-black dark:text-white">
-            {experience.map((exp, idx) => (
-              <div key={idx}>
-                <p className="underline underline-offset-4 font-semibold text-xl">{exp.company}</p>
-                <p className="italic">{exp.position}</p>
-                <p className="italic text-base">({exp.date})</p>
-              </div>
+        {/* Right Column: Professional Experience */}
+        <div className="md:col-span-1">
+          <h3 className="text-2xl font-semibold mb-4 text-center text-lightPrimary dark:text-darkPrimary">Professional Experience</h3>
+          <ul className="text-black dark:text-white text-xl mb-4">
+            {experience.map((exp, i) => (
+              <li key={i} className="mb-4">
+                <p className="underline underline-offset-4">{exp.company}</p>
+                <p className="italic text-lg">{exp.title}</p>
+                <p className="italic text-base">{exp.period}</p>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </section>

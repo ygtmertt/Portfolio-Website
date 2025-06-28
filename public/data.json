@@ -1,0 +1,56 @@
+{
+  "en": {
+    "heroSection": {
+      "greeting": "Hi,",
+      "intro": "Yiğit Ömer Mert",
+      "ctaHtml": "I'm a software developer who is passionate about building beautiful and functional web experiences."
+    },
+    "profileSection": {
+      "basicInformation": {
+        "location": "Istanbul, Turkey",
+        "languages": "English(C1), German(A1)",
+        "hobbies": "Basketball, Bass Guitar, Reading, Botanics, Swimming, Fitness",
+        "softSkills": "Analytic Thinking, Team Player, Motivated, Hardworking"
+      },
+      "education": [
+        {
+          "institution": "Workintech",
+          "program": "Fullstack Course",
+          "period": "(2025-2025)"
+        },
+        {
+          "institution": "Bahçeşehir University",
+          "program": "Software Engineering",
+          "period": "(2020-2024)"
+        },
+        {
+          "institution": "Politechnika Krakowska",
+          "program": "Erasmus+ Exchange",
+          "period": "(2023-2023)"
+        },
+        {
+          "institution": "Florya Tevfik Ercan Highschool",
+          "program": "Highschool",
+          "period": "(2015-2019)"
+        }
+      ],
+      "experience": [
+        {
+          "company": "Softtech",
+          "title": "Long Term Backend Developer Intern",
+          "period": "(Apr 2024 - Jul 2024)"
+        },
+        {
+          "company": "KPMG",
+          "title": "Long Term Cyber Security Intern",
+          "period": "(Aug 2023 - Jan 2024)"
+        },
+        {
+          "company": "Kitoko Lighting",
+          "title": "IT Intern",
+          "period": "(Jul 2021 - Aug 2021)"
+        }
+      ]
+    }
+  }
+}
