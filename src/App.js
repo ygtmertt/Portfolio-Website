@@ -22,8 +22,6 @@ function App() {
   }, [darkMode]);
 
   return (
-    // The main app container's background and default text color dynamically change
-    // based on the 'darkMode' state, using the colors defined in tailwind.config.js.
     <div className="min-h-screen bg-lightBackground dark:bg-darkBackground text-gray-900 dark:text-gray-100 transition-colors duration-300">
       <LanguageProvider>
         <ProfileProvider>

@@ -6,7 +6,6 @@ const Hero = () => {
   const { data, loading } = useLanguage();
   if (loading) return null;
 
-  // Verileri API'den alıyoruz
   const { greeting, intro, ctaHtml } = data.heroSection;
 
   return (
@@ -14,7 +13,6 @@ const Hero = () => {
       id="hero"
       className="flex flex-col-reverse md:flex-row items-center justify-between max-w-6xl mx-auto py-20 px-6"
     >
-      {/* Text Section */}
       <div className="flex-1 text-center md:text-left">
         <h1 className="text-5xl font-extrabold mb-4 leading-tight text-gray-900 dark:text-gray-100">
           {greeting}
@@ -27,7 +25,6 @@ const Hero = () => {
           dangerouslySetInnerHTML={{ __html: ctaHtml }}
         />
 
-        {/* Social Buttons */}
         <div className="flex justify-center md:justify-start gap-8">
           <a
             href="https://github.com/ygtmertt"

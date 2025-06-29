@@ -9,15 +9,12 @@ const Header = ({ darkMode, setDarkMode }) => {
   
 
   return (
-    // Header background and text color now fully adapt to dark/light mode using the new palette
     <header className="bg-lightBackground dark:bg-darkBackground text-gray-900 dark:text-gray-100 shadow-md sticky top-0 z-50">
       <div className="max-w-6xl mx-auto flex justify-between items-center p-4 md:px-8">
-        {/* Logo text color adapts */}
         <div className="text-4xl font-bold cursor-pointer select-none darkPrimary dark:ligthPrimary">
           MyPortfolio
         </div>
 
-        {/* Desktop Menu - link colors adapt to the new palette */}
         <nav className="hidden md:flex space-x-8 font-medium text-lightSecondary dark:text-darkSecondary">
           <a href="#hero" className="font-bold over:text-lightPrimary dark:hover:text-darkPrimary transition">Home</a>
           <a href="#about" className="font-bold hover:text-lightPrimary dark:hover:text-darkPrimary transition">About</a>
@@ -26,7 +23,6 @@ const Header = ({ darkMode, setDarkMode }) => {
           <a href="#footer" className="font-bold hover:text-lightPrimary dark:hover:text-darkPrimary transition">Contact</a>
         </nav>
 
-        {/* Dark Mode Toggle (Desktop) - button background adapts to the new primary colors */}
         <button
           onClick={toggleDarkMode}
           aria-label="Toggle Dark Mode"
@@ -35,7 +31,6 @@ const Header = ({ darkMode, setDarkMode }) => {
           {darkMode ? '  ☀︎  ' : '⏾'}
         </button>
 
-        {/* Mobile Hamburger - border, hover background, and SVG icon color adapt */}
         <button
           onClick={toggleMenu}
           className="md:hidden p-2 rounded border border-lightSecondary dark:border-darkSecondary hover:bg-gray-200 dark:hover:bg-gray-800 transition"
@@ -66,7 +61,6 @@ const Header = ({ darkMode, setDarkMode }) => {
         </button>
       </div>
 
-      {/* Mobile Menu - background, text, and link colors adapt to the new palette */}
       {menuOpen && (
         <nav className="md:hidden bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100 flex flex-col space-y-4 py-4 px-6 font-medium">
           <a
@@ -98,7 +92,6 @@ const Header = ({ darkMode, setDarkMode }) => {
             Contact
           </a>
 
-          {/* Mobile Dark Mode Toggle - button background adapts to the new primary colors */}
           <button
             onClick={() => {
               toggleDarkMode();

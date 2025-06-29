@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Final Hand-Picked Color Palette for the application
+
         darkBackground: '#4731D3',      // Deep slate grey for dark mode background #1A202C
         darkPrimary: '#CBF281',         // Medium sky blue for main accents in dark mode #4299E1
         darkSecondary: '#ffffff',       // Light slate grey for secondary text/elements in dark mode #A0AEC0

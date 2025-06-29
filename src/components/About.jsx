@@ -13,7 +13,6 @@ const About = () => {
   return (
     <section
       id="about"
-      // Section background and main text color adapt to dark/light mode using the new colors
       className="bg-lightBackground dark:bg-darkBackground text-gray-900 dark:text-gray-100 py-20 px-6 max-w-6xl mx-auto rounded-lg"
     >
       <h2 className="text-4xl font-bold mb-8 text-lightPrimary dark:text-darkPrimary text-center">
@@ -32,7 +31,6 @@ const About = () => {
         {skills.map(({ name, icon }) => (
           <div
             key={name}
-            // Skill card background, text, and hover shadow adapt using the new colors
             className="bg-gray-200 dark:bg-gray-800 rounded-lg p-6 flex flex-col items-center w-28 shadow-md hover:shadow-lightPrimary dark:hover:shadow-darkPrimary transition"
           >
             <img

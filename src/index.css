@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom global styles if needed */
 body {
   @apply bg-darkBackground text-gray-100 font-sans;
 }

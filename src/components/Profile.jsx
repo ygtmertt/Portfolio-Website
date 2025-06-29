@@ -12,7 +12,6 @@ const Profile = () => {
       <h2 className="text-4xl font-bold text-lightPrimary dark:text-darkPrimary mb-12 text-center">Profile</h2>
 
       <div className="bg-darkPrimary dark:bg-lightPrimary grid md:grid-cols-3 gap-20 items-start">
-        {/* Left Column: Basic Information */}
         <div className="md:col-span-1 space-y-4">
           <h3 className="text-2xl font-semibold text-lightPrimary dark:text-darkPrimary text-start">Basic Information</h3>
           <ul className="text-black dark:text-white text-xl mb-4">
@@ -27,7 +26,6 @@ const Profile = () => {
           </ul>
         </div>
 
-        {/* Center: Education */}
         <div>
           <h3 className="text-2xl font-semibold text-lightPrimary dark:text-darkPrimary text-center mb-4">Education</h3>
           {education.map((edu, i) => (
@@ -38,7 +36,6 @@ const Profile = () => {
           ))}
         </div>
 
-        {/* Right Column: Professional Experience */}
         <div className="md:col-span-1">
           <h3 className="text-2xl font-semibold mb-4 text-center text-lightPrimary dark:text-darkPrimary">Professional Experience</h3>
           <ul className="text-black dark:text-white text-xl mb-4">
