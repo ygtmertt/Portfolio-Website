@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import { ProjectsProvider } from './context/ProjectsContext';
 import { ProfileProvider } from './context/ProfileContext';
 import { LanguageProvider } from './context/LanguageContext';
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -38,6 +39,7 @@ function App() {
           </ProjectsProvider>
         </ProfileProvider>
       </LanguageProvider>
+      <ToastContainer position="top-right" autoClose={3000} />
     </div>
   );
 }
